@@ -145,7 +145,7 @@ a.button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 0.9em;
 }
 
 nav {
@@ -165,7 +165,7 @@ nav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1em;
     display: block;
 }
 
