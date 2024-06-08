@@ -1,223 +1,324 @@
-:root{
-    --c1: #49DEAB;
-    --c2: #49DE79;
-    --c3: #18E0DF;
-    --c4: #49AFDE;
-    --c5: #4980DE;
-}
-html{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-body {
-    height: 100%;
-    min-height: 100vh;
-    background-image: linear-gradient(180deg, var(--c1), var(--c2), var(--c3));
-    background-repeat: no-repeat;
-    transition: font-size 0.3s ease;
-    padding: 0 4%;
-    overflow: auto;
-    margin: 0;
-}
-main {
-    display: grid;
-}
-footer{
-    background-image: linear-gradient(180deg, var(--c3), var(--c2), var(--c1));
-    border-radius: 8%;
-    box-shadow: 5px 10px 8px var(--c5);
-    text-align: center;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-header{
-    border: 2px solid #49DE79;
-    border-radius: 8%;
-    padding: 3%;
-    text-align: center;
-}
-.container-iframe {
-    display: flex;
-}
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="SmartySproutHub - Resurse si activitati educative prescolari: sudoku, activitati istete, pagini de colorat, uneste umbrele, punct cu punct, labirinturi, gaseste diferentele.">
+        <meta name="keywords" content="SmartySproutHub, activitati educative prescolari, activitati copii gradinita, activitati prescolari, resurse educative prescolari, sudoku prescolari, pagini de colorat, uneste umbrele, activitati punct cu punct, labirinturi copii, gaseste diferentele, fise de trasare, ce forma urmeaza, invatam sa numaram">
+        <title>SmartySproutHub : resurse si activitati educative prescolari</title>      
+        <meta name="author" content="Musina Elena-Andreea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="resurse/imagini/ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resurse/imagini/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resurse/imagini/ico/favicon-16x16.png">
+        <link rel="manifest" href="resurse/imagini/ico/site.webmanifest">
+        <link rel="mask-icon" href="resurse/imagini/ico/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
 
-#grid-pagina{  
-    display:grid;
-    grid-template-columns: repeat(3,auto);
-    grid-gap: 5%;
-    grid-template-areas: "zona-unu zona-unu zona-unu"
-                         "zona-doi zona-doi zona-opt"
-                         "zona-cinci zona-sase zona-opt"
-                         "zona-cinci zona-sase zona-opt"
-                         "zona-patru zona-trei zona-sapte"
-                         "zona-noua zona-noua zona-noua"
-}
-.zona-unu{  
-    grid-area: zona-unu; 
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-doi{  
-    grid-area: zona-doi;
-   /* border: 1px solid black; -> fara border aici pt ca este tabelul cu border*/
-    padding: 3%;
-}
-.zona-trei{  
-    grid-area: zona-trei;
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-patru{  
-    grid-area: zona-patru;
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-cinci{  
-    grid-area: zona-cinci; 
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-sase{  
-    grid-area: zona-sase; 
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-sapte{  
-    grid-area: zona-sapte; 
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-opt{  
-    grid-area: zona-opt; 
-    border: 1px solid black;
-    padding: 3%;
-}
-.zona-noua{
-    grid-area: zona-noua;
-    border: 1px solid black;
-    padding: 3%;
-}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
-img,video{
-    width:50%;
-    height:50%;
-}
 
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 0.8em; 
-        padding: 0 2%;
-        overflow: auto;
-        transition: all 0.5s ease;
-    }
-    #grid-pagina {
-      display: grid;
-      grid-gap: 3%;
-      width: 100%; 
-      grid-template-columns: 1fr;
-      /* grid-template-rows: auto; */
-      grid-template-areas: 
-                         "zona-unu"
-                         "zona-doi"
-                         "zona-opt"
-                         "zona-cinci"
-                         "zona-sase"
-                         "zona-patru"
-                         "zona-trei"
-                         "zona-sapte"
-                         "zona-noua"
-    }
-}
+        <link rel="stylesheet" href="./resurse/css/stylemain.css" type="text/css" />
+        <link rel="stylesheet" href="./resurse/css/general1000.css" type="text/css" media="screen and (max-width:1000px)"/>
+        <link rel="stylesheet" href="./resurse/css/general700.css" type="text/css" media="screen and (max-width:700px)"/>
+  
+        <link rel="stylesheet" href="./resurse/css/layout.css" type="text/css" />
+        
+        <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
+        
+        <link rel="stylesheet" href="./resurse/css/nav1000.css" type="text/css" media="screen and (max-width:1000px)"/>
+        
+        <link rel="stylesheet" href="./resurse/css/nav700.css" type="text/css" media="screen and (max-width:700px)"/>
 
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 0.9em; 
-        padding: 0 3%;
-        overflow: auto;
-        transition: all 0.5s ease;
-    }
-    #grid-pagina {
-        display: grid;
-        grid-gap: 4%;
-        width: 100%; 
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto; 
-    } 
-}
-.taburi-iframe {
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-wrap:wrap;
-}
-a.button {
-    flex: 1 1 0;
-    width: 20%;
-    background-color: bisque;
-    border: 2px solid grey;
-    border-radius: 0 20% 20% 0;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 0.9em;
-}
+        <link rel="stylesheet" href="./resurse/css/stil.css" type="text/css" />
+    </head>
+    <body>
+    
+    <header class="c1" id="h1" >
+        <h1><span>SmartySproutHub</span> Resurse si activitati educative prescolari </h1>
+       
+    </header>
+    <nav>
+            
+        <label id="hamburger" for="ch-menu">
+            <img src="./resurse/imagini/hamburger_icon_black.svg" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+        <ul class="meniu">
+            <li><div id="acasa">Acasa</div><div id="acasa-mediu"><span class="fas fa-regular fa-house"></span></div>
+                <ul>
+                    <li><a href="#promotii">Promotii</a></li>
+                    <li><a href="#produse">Produse</a></li>
+                    <li><a href="#orar">Program</a></li>
+                    <li><a href="#index-intrebari">FAQ</a></li>
+                    
+                </ul>
+            
+            
+            </li>
+            <li><a href="#">Inregistrare</a></li>
+            <li><div>Despre SmartySproutHub</div>
+                <ul>                        
+                    <li><a href="despre.html#prezentare">Despre noi</a></li>
+                    <li><a href="despre.html#galerie">Galerie</a></li>
+                    <li><a href="#termeni">Termeni si Conditii</a></li>
+                </ul>
+            </li>
+            <li><div>Produse</div>
+                <ul>
+                    <li><a href="http://www.google.com">Toate</a></li>
+                    <li><a href="#">Dezvoltarea motricitatii fine</a></li>
+                        <ul>
+                            <li><a href="#">Fise de trasare</a></li>
+                            <li><a href="#">Pagini de colorat</a></li>
+                            <li><a href="#">Activitati punct cu punct</a></li>
+                            <li><a href="#">Uneste umbrele</a></li>
+                        </ul>
+                    <li><a href="#">Dezvoltare cognitiva</a></li>
+                        <ul>
+                            <li><a href="#">Labirinturi copii</a></li>
+                            <li><a href="#">Gaseste diferentele</a></li>
+                            <li><a href="#">Sudoku</a></li>
+                        </ul>
+                    <li><a href="#">Abilitati matematice</a></li>
+                        <ul>
+                            <li><a href="#">Ce forma urmeaza</a></li>
+                            <li><a href="#">Invatam sa numaram</a></li>
+                        </ul>
+                </ul>
+            
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="grid-pagina">
+            <section id="welcome" class="zona-unu">
+                <h2>Bine ati venit</h2>
+                <p class="intro" >Bine ati venit in <b>SmartySproutHub</b>, unde veti gasi o multitudine de <strong>resurse educative pentru prescolari</strong>, pentru a-i ajuta pe <em>micii muguri destepti</em> sa se dezvolte armonios.</p>
+                <p>Intr-o lume plina de curiozitate si descoperiri, fiecare moment este o oportunitate de a investi in viitorul promitator al copiilor nostri. La <b>SmartySproutHub</b>, credem cu tarie ca fiecare zambet, fiecare intrebare si fiecare pas mic reprezinta un pas catre o lume a cunoasterii infinite. Asa cum spunea inteleptul Benjamin Franklin: <q>Investitia in cunoastere plateste intotdeauna cea mai buna dobanda.</q> Astfel, suntem mandri sa va intampinam in universul nostru captivant de resurse educationale pentru prescolari, unde fiecare lectie devine o aventura si fiecare descoperire deschide noi orizonturi.</p>
+                
+                <div class="intro-oferte"><div>Sudoku</div><div>Labirinturi copii</div><div>Pagini de colorat</div><div>Uneste umbrele</div><div>Activitati punct cu punct</div></div>
+                <p class="anunt intro">Lasa-ne pe noi sa ne ocupam de livrarea resurselor educationale prin curier pentru ca tu sa te bucuri de cat mai mult timp pretios alaturi de minunea ta.</p>
+                <div id="dv-prezentare-1">
+                    <div id="dv-prezentare">
+                    <figure>
+                        <picture>
+                            <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                            <source srcset="./resurse/imagini/SmartySproutHub_640.jpg" media="(max-width:700px)"/>
+                            <source srcset="./resurse/imagini/SmartySproutHub_1200.jpg" media="(max-width:1200px)"/>
+                            <img src="./resurse/imagini/SmartySproutHub.jpg" alt="text" title="SmartySproutHub"/>
+                        </picture>
+                        <figcaption>SmartySproutHub</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="container-video">
+                <img class="activitati_sudoku" src="resurse/imagini/1.png" alt="activitati_sudoku">
+                <hr class="sudoku"/>
+                <section id="invatamSudoku">
+                    <h2>Invatam Sudoku</h2>
+                    <p>Copilul tau inca nu stie sudoku insa crezi ca i-ar placea sa invete? Nimic mai <b>simplu</b>! Mai jos veti regasi video-uri cu lectii de sudoku, pentru copii. Sa-ncepem sa-nvatam!</p>
+                    <div class="container-iframe">
+                        <iframe name="ifr-video" class="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/EARV-rZ0o1U?si=6l3IVX6E7hfDmmmd" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/EARV-rZ0o1U?si=6l3IVX6E7hfDmmmd" target="ifr-video" class="button">Lectia 1: Sudoku pentru copii</a>
+                        <a href="https://www.youtube.com/embed/2SXl51D3bN8?si=O2_SqnfsKM-2f6ep" target="ifr-video" class="button">Lectia 2: Sudoku pentru copii</a>
+                        <a href="https://www.youtube.com/embed/Yvglo0BxgHQ?si=8J4gb-PJL2drk-yw" target="ifr-video" class="button">Lectia 3: Sudoku pentru copii</a><br/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+                <div id="centrare-video">
+                    <div id="clip-video">
+                        <div id="stil-video">
+                            <video width="320" height="240"  playsinline autoplay loop muted>
+                                <source src="resurse/video/Chocolate.mp4" type="video/mp4">
+                                <source src="resurse/video/Chocolate.ogv" type="video/ogv">
+                                <track default src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo=" kind="captions" srclang="ro" label="romana">
+                                <track src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo=" kind="captions" srclang="en" label="engleza">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="promotii" class="zona-trei">
+                <h2>Promotii SmartySproutHub</h2>
+                <article>
+                    <h3 class="titlu">Super oferta de Paste</h3>
+                    <p><b>SmartySproutHub</b> ofera <b>reduceri de <s>20%</s> <ins datetime="2024-03-19">30%</ins></b> pentru toate produsele cumparate pana la data de 5 Mai 2024.</p>
+                    <p>Oferta este valabila in fiecare zi, pana la data de 5 Mai, pe site-ul <abbr title="SmartySproutHub">SmSpH</abbr>.</p>
+                    <p>Oferiti-i celui mic oportunitatea de a-si dezvolta abilitatile si potentialul, profitand de reducerile de Paste!</p>
+                </article>
+                <article>
+                    <h3 class="titlu">Oferta pachet mix de activitati</h3>
+                    <p>SmartySproutHub ofera pachete cuprizand:</p>
+                    <ol>
+                        <li>O activitate pentru dezvoltarea motricitatii fine</li>
+                        <li>O activitate pentru dezvoltarea cognitiva</li>
+                        <li>O activitate pentru dezvoltarea abilitatilor matematice</li>
+                        <li><i>Gratis</i>: programul zilnic printat SmartySproutHub</li>
+                    </ol>  
+                </article>
+                <article>
+                    <h3 class="titlu colorat">Coloram si ne distram</h3>
+                    <p>La 3 pagini de colorat cumparate, primiti una gratis!</p>
+                    <ol>
+                        <li>Oferta se aplica pentru toate paginile de colorat</li>
+                        <li>Oferta nu se cumuleaza cu alte promotii</li>
+                        <li>Se vor adauga in cos 4 pagini de colorat</li>
+                    </ol>
+                    
+                </article>
+            </section>
+            <section id="produse" class="zona-patru">
+                <h2>Produsele noastre</h2>
+                <p>O varietate de activitati educative pentru prescolari pentru dezvoltarea: motricitatii fine, cognitive, abilitatilor matematice.</p>
+                <section>
+                    <h3>Dezvoltarea motricitatii fine</h3>
+                    <p>Aceste resurse il vor ajuta pe copil sa-si dezvolte motricitatea fina:</p>
+                    <ul>
+                        <li>Fise de trasare</li>
+                        <li>Pagini de colorat</li>
+                        <li>Activitati punct cu punct</li>
+                        <li>Uneste umbrele</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Dezvoltare cognitiva</h3>
+                    <p>Aceste resurse il vor ajuta pe copil sa-si dezvolte abilitatile cognitive:</p>
+                    <ul>
+                        <li>Labirinturi copii</li>
+                        <li>Gaseste diferentele</li>
+                        <li>Sudoku</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>Abilitati matematice</h3>
+                    <p>Aceste resurse il vor ajuta pe copil sa-si dezvolte abilitatile matematice:</p>
+                    <ul>
+                        <li>Ce forma urmeaza</li>
+                        <li>Invatam sa numaram</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="orar" class="zona-doi">
+                <h2>Program</h2>
+                <table id="tab-orar">
+                    <thead>
 
-nav {
-    overflow: hidden;
-    position: relative;
-}
-
-#hamburger {
-    background-image: linear-gradient(180deg, #49DEAB, #49DE79, #18E0DF);
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-nav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1em;
-    display: block;
-}
-
-/* Add a grey background color on mouse-over */
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-#tab-orar th, #tab-orar td {    
-    border: 1px solid black;    
-    padding: 10px;    
-    transition: all 0.5s linear;
-}
-#tab-orar{    
-    border-spacing: 0;    
-    border-collapse: collapse;
-    width:50%;
-}
-#tab-orar thead th:nth-child(2n){  
-    border: 2px solid rgb(50, 81, 60);
-    /* background-color: rgb(127, 255, 168); */
-}
-#tab-orar thead th:nth-of-type(odd){    
-    border: 2px solid rgb(4, 250, 78);
-    /* background-color: rgb(225, 248, 232); */
-}
-#tab-orar td:hover{    
-    background-color: rgb(205, 255, 234);
-    box-shadow: 5px 5px 5px #458368;
-}
-#tab-orar td[rowspan]:hover{    
-    background-color:rgb(197, 231, 211);
-}
-#tab-orar tbody{
-    border: 3px solid black;
-}
+                        <tr>
+                            <th>Zi</th>
+                            <th>8-10</th>
+                            <th>10-12</th>
+                            <th>12-14</th>
+                            <th>14-16</th>
+                            <th>16-18</th>
+                            <th>18-20</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luni</td>
+                            <td>Inviorarea de dimineata</td>
+                            <td>Invatam sa numaram!</td>
+                            <td>Somn/relaxare</td>
+                            <td>Unim umbre</td>
+                            <td>Iesim din labirint</td>
+                            <td>Coloram</td>
+                        </tr>
+                        <tr>
+                            <td>Marti</td>
+                            <td>Inviorarea de dimineata</td>
+                            <td>Unim punctele</td>
+                            <td>Somn/relaxare</td>
+                            <td>Recunoastem formele</td>
+                            <td>Coloram</td>
+                            <td>Sudoku</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>Inviorarea de dimineata</td>
+                            <td>Trasam forme</td>
+                            <td>Somn/relaxare</td>
+                            <td>Oare cate diferente gasim?</td>
+                            <td>Ce forma urmeaza</td>
+                            <td>Inviorarea de seara</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>Inviorarea de dimineata</td>
+                            <td>Ce numar urmeaza?</td>
+                            <td>Somn/relaxare</td>
+                            <td>Ce forma urmeaza?</td>
+                            <td>Cat de repede ies din labirint?</td>
+                            <td>Coloram</td>
+                        </tr>
+                        <tr>
+                            <td>Vineri</td>
+                            <td>Inviorarea de dimineata</td>
+                            <td>Unim puncte si numaram</td>
+                            <td>Somn/relaxare</td>
+                            <td>Sudoku</td>
+                            <td>Ne uitam dupa diferente</td>
+                            <td>Relaxare si joaca libera</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Sambata/Duminica</td>
+                            <td colspan="6">Relaxare si joaca libera cu parintii</td>
+                        </tr>
+                    </tbody>
+                    <tfoot><tr><td colspan="7">Aceasta este sugestia noastra de program, insa cel mai important este sa petreceti mult timp alaturi de micii vostri exploratori.</td></tr></tfoot>
+                </table> 
+            </section>
+            <section id="index-intrebari" class="zona-cinci">
+                <h2>Intrebari frecvente</h2>
+                <details><summary>Carei varste se adreseaza activitatile educative de pe acest site?</summary>
+                    <p>Se adreseaza copiilor cu varsta prescolara: 3-6 ani.</p>
+                </details>
+                <details><summary>Aveti activitati pe nivele diferite de dicultate?</summary>
+                    <p>Da, avem produse care necesita abilitati mai avansate.</p>
+                    <p>Un exemplu de activitate: <a href="Resurse\Downloads\dotToDotXmas2.pdf" download>Descarcabil</a> </p>
+                </details>
+                <details><summary>Aveti si magazin fizic?</summary>
+                    <p>Nu, insa trimitem prin curier in toata Romania.</p>
+                </details>
+                <details><summary>Ar fi potrivite aceste activitati si pentru un copil de 7 ani?</summary>
+                    <p>Activitatile educative pot fi folosite si de copiii care au trecut de varsta prescolara, in functie de pregatirea si abilitatile lor.</p>
+                </details>
+                <details><summary>Ce beneficii aduc aceste resurse in dezvoltarea copiilor?</summary>
+                    <p>Activitatile si resursele educative de pe acest site ii ajuta pe copiii prescolari sa-si dezvolte abilitatile motorii fine, coordonarea ochi-mana, concentrarea si rezolvarea de probleme, stimuland in acelasi timp creativitatea si imaginatia.</p>
+                </details>
+                <details><summary>Aveti si povesti?</summary>
+                    <p>Site-ul nostru se concentreaza pe diverse activitati, povesti puteti gasi la site-ul partener: <a href="https://funtasticbear.com/" target="_blank">Povesti funtastice pentru copii: FuntasticBear</a></p>
+                </details>
+            </section>
+            <section id="lista-utilizatori" class="zona-opt">
+                <h2>Lista utilizatori</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, dolorem eos? Debitis facere, corporis vero mollitia repudiandae ratione voluptas necessitatibus consectetur blanditiis et rem, maxime quas illo error eaque perferendis.</p>
+            </section>
+            <section id="utilizatori-statistici" class="zona-sase">
+                <h2>Date despre utilizatori si statistici</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sequi praesentium blanditiis inventore similique, deleniti quidem voluptatum aliquam veniam soluta laboriosam, non minima nam aspernatur repudiandae iste officiis nostrum architecto.</p>
+            </section>
+            <section id="site-server" class="zona-sapte">
+                <h2>Info despre site si server</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in, corrupti libero rem neque adipisci. Aliquid delectus inventore illo eius eum, iste sapiente aperiam, distinctio veritatis, quod autem. Praesentium, ipsa?</p>
+            </section>
+        </div>
+    </main>
+    <footer class="zona-noua">
+        <a href="#" title="mergi sus" id="link-top"><div id="triunghi"></div></a>
+		<address>
+			Strada Academiei 14, București 010014, România
+            <br/>
+            <a href="mailto:smartysprouthub@gmail.com">Trimite-ne un email</a>
+            <a href="tel:+4076543210">Suna-ne</a>
+            <a href="https://wa.me/15551234567?text=Vreau%20mai%20multe%20informatii%20">Chat cu un reprezentant</a>
+		</address>
+        <p><small>Copyright &copy; <time datetime="2019-08-06"> 6 August 2019</time> </small></p>
+    </footer>
+    </body>
+</html>
