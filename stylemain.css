@@ -5,26 +5,41 @@
     --c4: #49AFDE;
     --c5: #4980DE;
 }
-body{
-    background-image: linear-gradient(180deg, var(--c1), var(--c2), var(--c3));
+html{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+}
+body {
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, var(--c1), var(--c2), var(--c3));
+    background-repeat: no-repeat;
     transition: font-size 0.3s ease;
     padding: 0 4%;
     overflow: auto;
+    margin: 0;
+}
+main {
+    display: grid;
 }
 footer{
-    border: 1px solid grey;
-    padding: 3%;
+    background-image: linear-gradient(180deg, var(--c3), var(--c2), var(--c1));
     border-radius: 8%;
     box-shadow: 5px 10px 8px var(--c5);
     text-align: center;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 header{
     border: 2px solid #49DE79;
     border-radius: 8%;
     padding: 3%;
     text-align: center;
+}
+.container-iframe {
+    display: flex;
 }
 
 #grid-pagina{  
@@ -91,9 +106,10 @@ img,video{
 
 @media screen and (max-width: 480px) {
     body {
-        font-size: 14px; 
+        font-size: 0.8em; 
         padding: 0 2%;
         overflow: auto;
+        transition: all 0.5s ease;
     }
     #grid-pagina {
       display: grid;
@@ -110,14 +126,16 @@ img,video{
                          "zona-patru"
                          "zona-trei"
                          "zona-sapte"
+                         "zona-noua"
     }
 }
 
 @media screen and (max-width: 768px) {
     body {
-        font-size: 15px; 
+        font-size: 0.9em; 
         padding: 0 3%;
         overflow: auto;
+        transition: all 0.5s ease;
     }
     #grid-pagina {
         display: grid;
