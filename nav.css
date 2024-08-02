@@ -1,0 +1,62 @@
+nav {
+    --inaltime-meniu:3rem;
+    --latime-buton:250px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    z-index:100;
+}
+
+#hamburger, #ch-menu, #acasa-mediu{
+    display:none;
+}
+
+.meniu {
+    display: flex;
+    list-style-type: none;
+}
+
+.meniu, .meniu *{
+    margin:0;
+    padding:0;
+}
+
+.meniu li{
+    border: 1px solid var(--cInchis);
+    font-weight: bold;
+    height:var(--inaltime-meniu);
+    width:var(--latime-buton);
+    text-align: center;
+    box-sizing: border-box;
+}
+.meniu li:hover {
+    background-color: var(--cDeschis);
+    transition: all 1s linear;
+}
+
+.meniu li:hover>a, .meniu li:hover>div{
+    color: var(--c5);
+    transition: all 1s linear;
+}
+
+.meniu a, .meniu div{
+    background-color: var(--c1);
+    text-decoration: none;
+    color: black;
+    display: block;
+    height:100%;
+    line-height: var(--inaltime-meniu);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* submeniu */
+.meniu ul{
+    display:none;
+    list-style-type: none;
+}
+
+.meniu>li:hover>ul{
+    display:block;
+}
