@@ -1,0 +1,107 @@
+#grid-pagina{  
+    display:grid;
+    width:100vw;
+    height:100vh;
+    grid-gap: 5%;
+    grid-template-areas: "zona-unu zona-unu zona-unu zona-unu"
+                         "zona-doi zona-doi zona-opt zona-opt"
+                         "zona-cinci zona-sase zona-opt zona-opt"
+                         "zona-patru zona-trei zona-trei zona-sapte"
+                         "zona-noua zona-noua zona-noua zona-noua"
+}
+.zona-unu{  
+    grid-area: zona-unu; 
+    border: 1px solid black;
+    padding: 3%;
+    height:auto;
+}
+.zona-doi{  
+    grid-area: zona-doi;
+    padding: 3%;
+}
+.zona-trei{  
+    grid-area: zona-trei;
+    border: 1px solid black;
+    padding: 3%;
+}
+.zona-patru{  
+    grid-area: zona-patru;
+    border: 1px solid black;
+    padding: 3%;
+}
+.zona-cinci{  
+    grid-area: zona-cinci; 
+    border: 1px solid black;
+    padding: 3%;
+}
+.zona-sase{  
+    grid-area: zona-sase; 
+    border: 1px solid black;
+    padding: 3%;
+}
+.zona-sapte{  
+    grid-area: zona-sapte; 
+    border: 1px solid black;
+    padding: 3%;
+}
+.zona-opt{  
+    grid-area: zona-opt; 
+    border: 1px solid black;
+    padding: 3%;
+}
+.zona-noua{
+    grid-area: zona-noua;
+    border: 1px solid black;
+    padding: 3%;
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-family: "Merienda", Helvetica, sans-serif;
+        font-size: 15px;
+        transition: all 0.5s linear;
+    }
+    body {
+        font-size: 0.9em; 
+        padding: 0 3%;
+        overflow: auto;
+        transition: all 0.5s linear;
+    }
+    #grid-pagina {
+        display: grid;
+        grid-gap: 4%;
+        width: 100%; 
+        grid-template-areas: "zona-unu zona-unu "
+                             "zona-doi zona-opt"
+                             "zona-cinci zona-sase"
+                             "zona-patru zona-trei"
+                             "zona-sapte zona-sapte"
+                             "zona-noua zona-noua"
+    } 
+    .tabelOrar{
+        position: relative;
+        overflow-x: scroll;
+        overflow-y: auto; /* de folosit "hidden" daca vrem doar scroll bar orizontal insa nu se va vedea tot tabelul. */
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 480px) {
+    html{
+        font-family: "Merienda", Helvetica, sans-serif;
+        font-size: 13px;
+        transition: all 0.5s linear;
+    }
+    body {
+        font-size: 0.8em; 
+        padding: 0 2%;
+        overflow: auto;
+        transition: all 0.5s linear;
+    }
+    #grid-pagina {
+      display: block;
+    } 
+    .tabelOrar{
+        position: relative;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
