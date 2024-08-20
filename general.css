@@ -1,0 +1,270 @@
+html{
+    font-size: 17px;
+    transition: all 0.1s linear;    /*am folost 1s la curs, caci pe teams e delay*/
+    scroll-behavior: smooth;
+    color:var(--culoare-text);
+}
+body{
+    --culoare-text:rgb(28, 27, 26);
+    --culoare-hover: goldenrod;
+    --culoare-fundal: #a4b70a; /*#fffefb #f5f7f6 <#736c6c> <#b79f0a>*/
+    --culoare-fundal-secundara: #feffff;
+    --culoare-border:#f79f6d70; /*#eb9c31*/
+    --culoare-border-alt:#f79f6d60;
+    --culoare-border-iframe: #f38f55;
+    --culoare-header: #79b70a60; 
+    --culoare-footer: #b8704650;
+    --culoare-header-1:#602605;
+    --culoare-link-vizitat: #b87046;
+    --dim-spatiere: 150px;
+    
+    background-color: var(--culoare-fundal);
+    padding-left: var(--dim-spatiere);
+    padding-right: var(--dim-spatiere);
+    transition: all 0.1s linear;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /*min. 200; max. 800*/
+    font-style: normal;   
+}
+
+body.dark{
+    --culoare-text:#feffff;
+    --culoare-hover: goldenrod;
+    --culoare-fundal: #414938;
+    --culoare-fundal-secundara: #514423;
+    --culoare-border:#3B4C26;
+    --culoare-border-alt:#205136;
+    --culoare-border-iframe: #002029;
+    --culoare-header: #205136; 
+    --culoare-footer: #3B4C2650;
+    --culoare-header-1:#470B14;
+    color: var(--culoare-text);
+}
+
+body.darkdark{
+    --culoare-text:#feffff;
+    --culoare-hover: goldenrod;
+    --culoare-fundal: #414938;
+    --culoare-fundal-secundara: #514423;
+    --culoare-border:#3B4C26;
+    --culoare-border-alt:#205136;
+    --culoare-border-iframe: #002029;
+    --culoare-header: #205136; 
+    --culoare-footer: #3B4C2650;
+    --culoare-header-1:#470B14;
+    color: var(--culoare-text);
+}
+
+body.contrast{
+    --culoare-text:rgb(28, 27, 26);
+    --culoare-hover: goldenrod;
+    --culoare-fundal: #054fb9; /*#fffefb #f5f7f6 <#736c6c> <#b79f0a>*/
+    --culoare-fundal-secundara: #8babf1;
+    --culoare-border:#0073e6; /*#eb9c31*/
+    --culoare-border-alt:#054fb960;
+    --culoare-border-iframe: #c44601;
+    --culoare-header: #c44601; 
+    --culoare-footer: #0073e650;
+    --culoare-header-1:#f57600;
+    --culoare-link-vizitat: #6f3094;
+    color: var(--culoare-text);
+}
+
+p {
+    margin-top: 0.5rem;
+}
+main a:visited, footer a:visited{
+    color: var(--culoare-link-vizitat);
+}
+ 
+[href^="http"]:not(.taburi-iframe>a)::before{
+    content: "\2BB3";
+    font-size: 1.5em;
+    font-weight: 550;
+}
+
+/* footer [href^="http"]::before{
+    content: "\2BB3";
+    font-size: 1.5em;
+    font-weight: 550;
+} */
+
+[href^="http"]:hover::before{
+    color: rgb(63, 24, 73);
+}
+
+main a{
+    background-image: radial-gradient(var(--culoare-border-alt) 0%, var(--culoare-border-alt) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-size: 0; 
+    background-repeat: no-repeat;
+    transition: background-size 1s linear;  
+}
+main a:hover{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+main a:active{
+    border: solid 1px var(--culoare-border-iframe);
+}
+
+
+header a{
+    text-decoration: none;
+}
+#h1-container{
+    display: grid;
+    grid-template-areas: "logo h1 h1 h1 tema";
+    background-color: var(--culoare-header);
+    border:2px solid var(--culoare-border);
+    box-shadow: var(--culoare-border) 0 0 10px;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 1px;
+    align-items: center;
+}
+#header-img{
+    grid-area: logo;
+    max-width: 40%;
+    /* align-self: center; */
+    justify-self: left;
+}
+h1{
+    grid-area: h1;
+    margin: 0;
+    align-self: center;
+    font-size: 3rem;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--culoare-header-1);
+    background: linear-gradient(to right,var(--culoare-header-1) 5%, #8d3b0c 18%, #b8490a 33%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.contrast h1{
+    background:linear-gradient(to right, var(--culoare-fundal-secundara) 5%, #8babf1 18%, #0073e6 33%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#container-schimba-tema{
+    grid-area: tema;
+    align-self: end;
+    /* justify-self: right; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+#btn-tema{
+    background-color: var(--culoare-footer);
+    border: 1px solid var(--culoare-border-iframe);
+    border-radius: 30%;
+}
+h2{
+    font-weight: bold;
+    border: 2px solid var(--culoare-border);
+    background-color: var(--culoare-border);
+    margin-top: 0.83rem;
+    margin-bottom: 0.83rem;
+    padding: 0.3rem;
+}
+#tab-program th,#tab-program td{
+    border: 1px solid #b86809;
+    padding: 10px;
+}
+
+#tab-program{
+    border-spacing: 2px;
+}
+
+#tab-program tbody tr:nth-child(odd){
+    background-color: var(--culoare-header);
+}
+
+#tab-program tbody tr:nth-child(even){
+    background-color: var(--culoare-footer);
+}
+
+#tab-program tbody tr:hover{
+    background-color: #E5E4E2; /*#b79f0a80*/
+    transition: all 0.5s linear;
+}
+
+
+/* ---- link sus ------*/
+#link-top{
+    --culoare-triunghi: #602605;
+    --culoare-link-top: #b87f09;
+    position:fixed;
+    bottom:0;
+    opacity:0.5;
+    right:3.5vw;
+    width:3rem;
+    box-sizing: border-box;
+    height:3rem;
+    line-height:3.2rem;
+    text-align:center;
+    border:1px solid var(--culoare-triunghi);
+    border-top-left-radius: 65%;
+    border-top-right-radius: 65%;
+    background: var(--culoare-link-top);
+    box-shadow: inset 0 0 8px 4px #8f6107;
+}
+#link-top:hover{
+    opacity:1;
+    background: #b87046;
+}
+#triunghi{
+    font-size: 2.9rem;
+    color: var(--culoare-triunghi);
+    text-align: center;
+    vertical-align: middle;
+    display:inline-block;
+    transition: all 1s linear;
+}
+  
+#link-top:hover #triunghi{
+    transform: scale(1.2,1.2);
+}
+.fg-img{
+    width: 100%;
+}
+main img{
+    width: 100%;
+    height: auto;
+}
+footer{
+    font-size: small;
+}
+
+
+@media screen and (min-width: 801px) and (max-width:1200px){  /*media query pt ecran mediu*/
+    html{
+         font-size: 0.8rem !important;
+    }
+    body{
+         --dim-spatiere:80px;
+    }
+    video{
+        width:40%;
+        height:40%;
+    }
+  }
+  
+  @media screen and (max-width:800px){  /*media query pt ecran mic*/
+    html{
+        font-size: 0.6rem !important;
+    }
+    body{
+        --dim-spatiere:30px;
+    }  
+    video{
+        width:30%;
+        height:30%;
+    }
+  }
+
+
